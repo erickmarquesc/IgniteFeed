@@ -1,7 +1,7 @@
 import { Sidebar } from './components/Sidebar/Sidebar';
 import { Header } from './components/Header/Header';
 import style from './App.module.css';
-import { Post } from './Post';
+import { Post } from './components/Post/Post';
 import './global.css';
 
 function App() {
@@ -12,8 +12,7 @@ function App() {
       <div className={style.wrapper}>
         <Sidebar />
         <main>
-          <Post author="ERick MArques"
-            content="Comentário legal" />
+          <Post />
         </main>
       </div>
     </>
