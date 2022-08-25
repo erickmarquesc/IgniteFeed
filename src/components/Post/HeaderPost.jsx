@@ -1,11 +1,12 @@
+import { Avatar } from '../Avatar/Avatar';
 import styles from './Post.module.css';
 
 export function HeaderPost() {
   return (
     <header>
       <div className={styles.author}>
-
-        <img className={styles.avatar} src='https://github.com/erickmarquesc.png' />
+                
+        <Avatar borderGreen={true}/>
 
         <div className={styles.authorInfo}>
           <strong>Erick Marques</strong>
