@@ -6,7 +6,7 @@ export function HeaderPost() {
     <header>
       <div className={styles.author}>
                 
-        <Avatar borderGreen={true}/>
+        <Avatar src='https://github.com/erickmarquesc.png'/>
 
         <div className={styles.authorInfo}>
           <strong>Erick Marques</strong>
