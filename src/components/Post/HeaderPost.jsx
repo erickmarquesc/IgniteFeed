@@ -1,24 +1,34 @@
+import { format, formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from '../Avatar/Avatar';
 import styles from './Post.module.css';
 
-export function HeaderPost() {
+export function HeaderPost({ author, publishedAt }) {
+  const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
+    locale: ptBR,
+  });
+
+  const publishedDateRelativeToNow = formatDistanceToNow(publishedAt,{
+    locale: ptBR,
+    addSuffix: true,
+  })
   return (
     <header>
       <div className={styles.author}>
-                
-        <Avatar src='https://github.com/erickmarquesc.png'/>
+
+        <Avatar src={author.avatarUrl} />
 
         <div className={styles.authorInfo}>
-          <strong>Erick Marques</strong>
-          <span>Web Developer</span>
+          <strong>{author.name}</strong>
+          <span>{author.role}</span>
         </div>
 
       </div>
       <time
-        title='21 de Agosto às 17:00h'
-        dateTime='2022-08-21 17:00:00'
+        title={publishedDateFormatted}
+        dateTime={publishedAt.toISOString()}
       >
-        Prublicado há 1h
+        {publishedDateRelativeToNow}
       </time>
     </header>
   );
