@@ -1,9 +1,10 @@
 import { format, formatDistanceToNow } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from '../Avatar/Avatar';
+import ptBR from 'date-fns/locale/pt-BR';
 import styles from './Post.module.css';
 
 export function HeaderPost({ author, publishedAt }) {
+
   const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
     locale: ptBR,
   });
@@ -11,7 +12,8 @@ export function HeaderPost({ author, publishedAt }) {
   const publishedDateRelativeToNow = formatDistanceToNow(publishedAt,{
     locale: ptBR,
     addSuffix: true,
-  })
+  });
+
   return (
     <header>
       <div className={styles.author}>
@@ -24,12 +26,14 @@ export function HeaderPost({ author, publishedAt }) {
         </div>
 
       </div>
+
       <time
         title={publishedDateFormatted}
         dateTime={publishedAt.toISOString()}
       >
         {publishedDateRelativeToNow}
       </time>
+
     </header>
   );
 };
