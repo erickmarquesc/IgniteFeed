@@ -7,7 +7,7 @@ export function Comments({commentsMap}) {
     <div className={styles.commentList}>
       {commentsMap.map(comment => {
         return (
-          <div className={styles.comment}>
+          <div key={comment} className={styles.comment}>
             <Avatar hasborder={false} src='https://github.com/erickmarquesc.png' />
             <div className={styles.commentBox}>
               <div className={styles.commentContent}>
