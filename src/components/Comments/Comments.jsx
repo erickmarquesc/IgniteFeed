@@ -25,7 +25,7 @@ export function Comments({commentsMap}) {
                     <Trash size={24} />
                   </button>
                 </header>
-                <p>Muito bom Dev, parabéns!! ✌️✌️</p>
+                <p>{comment}</p>
               </div>
               <footer>
                 <button>

@@ -4,11 +4,17 @@ import { useState } from 'react';
 
 export function FormPost() {
 
-  const [comments, setComments] = useState([1, 2]);
+  const [comments, setComments] = useState(['Comentário legal! 🚧']);
+  const [newCommentText, setNewCommentText] = useState('');
 
   function handleCreateNewComment() {
     event.preventDefault();
-    setComments([...comments, comments.length + 1]);
+    setComments([...comments, newCommentText]);
+    setNewCommentText('');
+  };
+
+  function handleNewCommentChange(){
+    setNewCommentText(event.target.value);
   };
 
   return (
@@ -19,13 +25,16 @@ export function FormPost() {
       >
         <strong>Deixe eu feedback</strong>
         <textarea
+          name='comment'
           placeholder='Deixe um comentário'
+          onChange={handleNewCommentChange}
+          value={newCommentText}
         />
         <footer>
           <button type="submit">Publicar</button>
         </footer>
       </form>
-      <Comments commentsMap={comments}/>
+      <Comments commentsMap={comments} />
     </>
   );
 };
