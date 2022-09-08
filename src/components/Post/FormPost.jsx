@@ -1,5 +1,5 @@
-import styles from './Post.module.css';
 import { Comments } from '../Comments/Comments';
+import styles from './Post.module.css';
 import { useState } from 'react';
 
 export function FormPost() {
@@ -13,9 +13,24 @@ export function FormPost() {
     setNewCommentText('');
   };
 
-  function handleNewCommentChange(){
+  function handleNewCommentChange() {
     setNewCommentText(event.target.value);
   };
+
+  function deleteComment(commentToDelete) {
+    /* Para respeitar a imutabilidade para manter a performance 
+     * usamos o useState para atualizar as variáveis do sistema.
+     */
+    /* Para isso usei o filter que retorna true quando a premissa é verdadaeir
+     * mantendo o commentário quando false é deletado.
+     */
+    const commentWithoutDeletedOne = comments.filter(comment => {
+      return comment !== commentToDelete;
+    });
+    setComments(commentWithoutDeletedOne);
+  };
+
+  const isNewCommentEmpty = newCommentText.length === 0;
 
   return (
     <>
@@ -25,16 +40,28 @@ export function FormPost() {
       >
         <strong>Deixe eu feedback</strong>
         <textarea
+          required
           name='comment'
+          value={newCommentText}
           placeholder='Deixe um comentário'
           onChange={handleNewCommentChange}
-          value={newCommentText}
         />
         <footer>
-          <button type="submit">Publicar</button>
+          <button
+            type="submit"
+            disabled={isNewCommentEmpty}>
+            Publicar
+          </button>
         </footer>
       </form>
-      <Comments commentsMap={comments} />
+      {comments.map(comment => {
+        return (
+          <Comments
+            key={comment}
+            content={comment}
+            onDeletecomment={deleteComment} />
+        );
+      })}
     </>
   );
 };
