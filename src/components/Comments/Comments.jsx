@@ -1,11 +1,20 @@
 import { ThumbsUp, Trash } from 'phosphor-react';
 import styles from './Comments.module.css';
 import { Avatar } from '../Avatar/Avatar';
+import { useState } from 'react';
 
 export function Comments({ content, onDeletecomment }) {
-  function handleDeleteComment(){
-    onDeletecomment(content);
+
+  const [clapCount, setClapCount] = useState(0);
+
+  function handleNewClapComment() {
+    setClapCount(clapCount + 1);
   }
+
+  function handleDeleteComment() {
+    onDeletecomment(content);
+  };
+
   return (
     <div className={styles.commentList}>
       <div className={styles.comment}>
@@ -22,9 +31,9 @@ export function Comments({ content, onDeletecomment }) {
                   Prublicado há 1h
                 </time>
               </div>
-              <button 
-              title='Deletar comentário'
-              onClick={handleDeleteComment}
+              <button
+                title='Deletar comentário'
+                onClick={handleDeleteComment}
               >
                 <Trash size={24} />
               </button>
@@ -32,9 +41,9 @@ export function Comments({ content, onDeletecomment }) {
             <p>{content}</p>
           </div>
           <footer>
-            <button >
+            <button onClick={handleNewClapComment}>
               <ThumbsUp />
-              Aplaudir <span>20</span>
+              Aplaudir <span>{clapCount}</span>
             </button>
           </footer>
         </div>
