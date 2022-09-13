@@ -8,8 +8,10 @@ export function Comments({ content, onDeletecomment }) {
   const [clapCount, setClapCount] = useState(0);
 
   function handleNewClapComment() {
-    setClapCount(clapCount + 1);
-  }
+    setClapCount((currentValueClapCount) => {
+      return currentValueClapCount + 1
+    });
+  };
 
   function handleDeleteComment() {
     onDeletecomment(content);
