@@ -4,7 +4,6 @@ import style from './App.module.css';
 import { Post } from './components/Post/Post';
 import './global.css';
 
-
 const post = [
   {
     id: 1,
@@ -59,7 +58,7 @@ function App() {
         </main>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
