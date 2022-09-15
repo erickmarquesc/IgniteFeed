@@ -1,6 +1,15 @@
 import styles from './Post.module.css';
 
-export function BodyPost({ content }) {
+interface IContent {
+  type: string;
+  content: string;
+};
+
+interface IBodyPostProps {
+  content: IContent[],
+};
+
+export function BodyPost({ content }: IBodyPostProps) {
   return (
     <div className={styles.content}>
       {content.map(line => {
