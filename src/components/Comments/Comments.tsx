@@ -3,7 +3,13 @@ import styles from './Comments.module.css';
 import { Avatar } from '../Avatar/Avatar';
 import { useState } from 'react';
 
-export function Comments({ content, onDeletecomment }) {
+
+interface ICommentsProps {
+  content: string,
+  onDeletecomment: (comment: string) => void;
+};
+
+export function Comments({ content, onDeletecomment }: ICommentsProps) {
 
   const [clapCount, setClapCount] = useState(0);
 
@@ -20,7 +26,7 @@ export function Comments({ content, onDeletecomment }) {
   return (
     <div className={styles.commentList}>
       <div className={styles.comment}>
-        <Avatar hasborder={false} src='https://github.com/erickmarquesc.png' />
+        <Avatar hasBorder={false} src='https://github.com/erickmarquesc.png' />
         <div className={styles.commentBox}>
           <div className={styles.commentContent}>
             <header>
