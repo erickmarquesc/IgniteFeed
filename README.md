@@ -41,6 +41,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Figma
 - Vite
 - TypeScript
+- ReactJS
     
 ## 🔖 Layout
 
