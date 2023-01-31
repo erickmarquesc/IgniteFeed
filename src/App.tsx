@@ -14,11 +14,11 @@ const post = [
     },
     content: [
       { type: 'paragraph', content: 'Fala galeraa 👋' },
-      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
-      { type: 'link', content: '👉 jane.design/doctorcare' },
-      { type: 'paragraph', content: '#novoprojeto #nlw #rocketseat' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu GitHub. Meu objetivo é estar sempre em evolução! 🚀' },
+      { type: 'link', content: '👉 coffeeDelivery.com' },
+      { type: 'paragraph', content: '#novoprojeto #boraCodar #rocketseat' },
     ],
-    publishedAt: new Date('2022-08-29 20:00:00'),
+    publishedAt: new Date('2023-01-01 20:00:00'),
   },
   {
     id: 2,
@@ -29,11 +29,11 @@ const post = [
     },
     content: [
       { type: 'paragraph', content: 'Fala pessoal ✌️' },
-      { type: 'paragraph', content: 'Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏻' },
-      { type: 'link', content: 'Acesse e deixe seu feedback 👉 devonlane.design' },
-      { type: 'paragraph', content: '#uiux #userexperience' },
+      { type: 'paragraph', content: 'Finalmente meu primo finalizou seu novo projeto para o portfólio. Foi um baita desafio criar todo o design, mas consegui 💪🏻' },
+      { type: 'link', content: 'Acesse e deixe seu feedback 👉 coffeeDelivery.com' },
+      { type: 'paragraph', content: '#ui #userexperience' },
     ],
-    publishedAt: new Date('2022-08-30 20:00:00'),
+    publishedAt: new Date('2022-12-28 20:00:00'),
   },
 ];
 
