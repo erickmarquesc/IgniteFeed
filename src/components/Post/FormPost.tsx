@@ -1,10 +1,10 @@
+import { useState, FormEvent, ChangeEvent } from 'react';
 import { Comments } from '../Comments/Comments';
 import styles from './Post.module.css';
-import { useState, FormEvent, ChangeEvent } from 'react';
 
 export function FormPost() {
 
-  const [comments, setComments] = useState(['Comentário legal! 🚧']);
+  const [comments, setComments] = useState(['Ainda precisa de ajustes! Mas já já estará 100% 🚧']);
   const [newCommentText, setNewCommentText] = useState('');
 
   function handleCreateNewComment(event: FormEvent) {
@@ -19,9 +19,9 @@ export function FormPost() {
 
   function deleteComment(commentToDelete: string) {
     /* Para respeitar a imutabilidade para manter a performance 
-     * usamos o useState para atualizar as variáveis do sistema.
+     * usei o useState para atualizar as variáveis do sistema.
      */
-    /* Para isso usei o filter que retorna true quando a premissa é verdadaeir
+    /* Para isso usei o filter que retorna true quando a premissa é verdadadeira
      * mantendo o commentário quando false é deletado.
      */
     const commentWithoutDeletedOne = comments.filter(comment => {
@@ -38,7 +38,7 @@ export function FormPost() {
         className={styles.commentForm}
         onSubmit={handleCreateNewComment}
       >
-        <strong>Deixe eu feedback</strong>
+        <strong>Deixe seu feedback</strong>
         <textarea
           required
           name='comment'
