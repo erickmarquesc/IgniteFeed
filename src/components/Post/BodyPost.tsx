@@ -21,7 +21,7 @@ export function BodyPost({ content }: IBodyPostProps) {
         } else if (line.type === 'link') {
           return (
             <p key={line.content}>
-              <a href='#'>
+              <a href='https://coffee-delivery-chi-olive.vercel.app/' target={'_blank'}>
                 {line.content}
               </a>
             </p>
