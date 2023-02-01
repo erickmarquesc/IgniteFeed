@@ -3,7 +3,6 @@ import styles from './Comments.module.css';
 import { Avatar } from '../Avatar/Avatar';
 import { useState } from 'react';
 
-
 interface ICommentsProps {
   content: string,
   onDeletecomment: (comment: string) => void;

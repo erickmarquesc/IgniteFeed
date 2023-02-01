@@ -1,7 +1,7 @@
 .comment {
-  margin-top: 1.5rem;
-  display: flex;
   gap: 1rem;
+  display: flex;
+  margin-top: 1.5rem;
 }
 
 .commentBox {
@@ -9,9 +9,9 @@
 }
 
 .commentContent {
-  background: var(--gray-700);
-  border-radius: 8px;
   padding: 1rem;
+  border-radius: 8px;
+  background: var(--gray-700);
 }
 
 .commentContent header {
@@ -22,24 +22,24 @@
 
 .authorAndTime strong {
   display: block;
-  font-size: 0.875rem;
   line-height: 1.6;
+  font-size: 0.875rem;
 }
 
 .authorAndTime time {
   display: block;
-  font-size: 0.75rem;
   line-height: 1.6;
+  font-size: 0.75rem;
   color: var(--gray-400);
 }
 
 .commentContent header button {
-  background: transparent;
   border: 0;
-  color: var(--gray-400);
-  cursor: pointer;
   line-height: 0;
+  cursor: pointer;
   border-radius: 2px;
+  color: var(--gray-400);
+  background: transparent;
 }
 
 .commentContent header button:hover {
@@ -56,13 +56,13 @@
 }
 
 .commentBox footer button {
-  background: transparent;
   border: 0;
-  color: var(--gray-400);
-  cursor: pointer;
   display: flex;
-  align-items: center;
+  cursor: pointer;
   border-radius: 2px;
+  align-items: center;
+  color: var(--gray-400);
+  background: transparent;
 }
 
 .commentBox footer button:hover {

@@ -3,18 +3,12 @@ import styles from './Sidebar.module.css';
 import cover from '../../assets/capa.svg';
 import { Avatar } from '../Avatar/Avatar';
 
-interface IUrls {
-  gitHubURL: string;
-  linkedinURL: string;
-  avatarURL: string;
-};
+export function Sidebar() {
 
-export function Sidebar({ gitHubURL, linkedinURL, avatarURL }: IUrls) {
+  const gitHubURL = 'https://github.com/erickmarquesc';
+  const linkedinURL = 'https://www.linkedin.com/in/erick-marques-cabral-999b151b4/';
+  const avatarURL = 'https://github.com/erickmarquesc.png';
 
-  gitHubURL = 'https://github.com/erickmarquesc';
-  linkedinURL = 'https://www.linkedin.com/in/erick-marques-cabral-999b151b4/';
-  avatarURL = 'https://github.com/erickmarquesc.png';
-  
   return (
     <aside className={styles.sidebar}>
 
