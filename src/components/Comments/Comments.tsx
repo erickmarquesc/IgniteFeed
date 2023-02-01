@@ -26,7 +26,10 @@ export function Comments({ content, onDeletecomment }: ICommentsProps) {
   return (
     <div className={styles.commentList}>
       <div className={styles.comment}>
-        <Avatar hasBorder={false} src='https://github.com/erickmarquesc.png' />
+        <Avatar
+          hasBorder={false}
+          src='https://github.com/erickmarquesc.png'
+        />
         <div className={styles.commentBox}>
           <div className={styles.commentContent}>
             <header>

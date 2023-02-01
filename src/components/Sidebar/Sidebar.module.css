@@ -42,6 +42,7 @@
 
 .sidebar footer{
   border-radius: 1px solid var(--gray-600);
+  border-top: 2px solid var(--gray-600);
   margin-top: 1.5rem;
   padding: 1.5rem 2rem 2rem;
 }
@@ -49,7 +50,6 @@
 .sidebar a{
   background: transparent;
   color: var(--green-500);
-  border: 1px solid var(--green-500);
   border-radius: 8px;
   height: 50px;
   padding: 0 1.5rem;
@@ -57,8 +57,8 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 24px;
 
   transition: color 0.2s, background-color 0.2s;
 }
